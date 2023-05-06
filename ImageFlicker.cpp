@@ -1,5 +1,4 @@
 ﻿#define STRICT
-#define UNICODE
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
@@ -191,7 +190,7 @@ void OnCreate(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 }
 
 // サイズ変更
-void OnSize(UINT cx, UINT cy)
+void OnSize(int cx, int cy)
 {
     int nParts[] = { cx - 100, -1 };
     SendMessage(hStatusbar, SB_SETPARTS, 2, (LPARAM)&nParts);
